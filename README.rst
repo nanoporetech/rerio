@@ -30,6 +30,15 @@ Rerio research models can be run within megalodon by specifying the data directo
 
    megalodon fast5s/ --guppy-params "-d ./rerio/" --guppy-config dna_r9.4.1_450bps_modbases_all-context_hac.cfg
 
+Models Summary
+--------------
+
+============================================== ======= ====== ============== ======== =============
+Config                                         DNA/RNA Pore   Device         Modbases Guppy Support
+============================================== ======= ====== ============== ======== =============
+dna_r9.4.1_450bps_modbases_all-context_hac.cfg DNA     R9.4.1 MinION/GridION 5mC, 6mA >=3.5        
+============================================== ======= ====== ============== ======== =============
+
 Licence and Copyright
 ---------------------
 
