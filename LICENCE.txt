@@ -79,7 +79,7 @@ Each Contributor hereby grants You a world-wide, royalty-free,
 non-exclusive license under Contributor copyrights Licensable by such
 Contributor to use, reproduce, make available, modify, display,
 perform, distribute, and otherwise exploit solely for Research Purposes
-its Contributions, either on an unmodified basis, with Modifications, 
+its Contributions, either on an unmodified basis, with Modifications,
 or as part of a Larger Work.
 
 2.2. Effective Date

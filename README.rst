@@ -13,7 +13,7 @@ Installation
 ------------
 
 Rerio can be downloaded by cloning from github ``git clone https://github.com/nanoporetech/rerio``.
-Once downloaded, models can be run by specifying the guppy data path option (``-d`` or ``--data_path``) and specifying the desired config file.
+Once downloaded, models can be run by specifying the guppy data path option (``-d`` or ``--data_path``) and selecting the desired config file.
 
 ::
 
@@ -33,7 +33,7 @@ Rerio research models can be run within megalodon by specifying the data directo
 Licence and Copyright
 ---------------------
 
-|copy| 2019-20 Oxford Nanopore Technologies Ltd.
+|copy| 2020 Oxford Nanopore Technologies Ltd.
 
 .. |copy| unicode:: 0xA9 .. copyright sign
 
