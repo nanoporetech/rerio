@@ -8,7 +8,7 @@ Rerio
 
 Rerio contains "research release" basecalling models and configuration files.
 All models are compatible with guppy (see `community page <https://community.nanoporetech.com/downloads>`_ for download/install instructions).
-Since research models often utilise new features, the latest version of guppy be need to be installed.
+Since research models often utilise new features, the latest version of guppy may be need to be installed.
 
 Installation
 ------------
