@@ -8,6 +8,7 @@ Rerio
 
 Rerio contains "research release" basecalling models and configuration files.
 All models are compatible with guppy (see `community page <https://community.nanoporetech.com/downloads>`_ for download/install instructions).
+Since research models often utilise new features, the latest version of guppy be need to be installed.
 
 Installation
 ------------
@@ -17,9 +18,10 @@ Once downloaded, models can be run by specifying the guppy data path option (``-
 
 ::
 
-    git clone https://github.com/nanoporetech/rerio
-    ./ont-guppy/bin/guppy_basecaller -i fast5s/ -s basecalled_fast5s \
-        -c dna_r9.4.1_450bps_modbases_all-context_hac.cfg -d ./rerio/
+   git clone https://github.com/nanoporetech/rerio
+   ./ont-guppy/bin/guppy_basecaller -i fast5s/ -s basecalled_fast5s \
+       -d ./rerio/basecall_models/ \
+       -c research_dna_r9.4.1_modbases_all-context_hac.v1.cfg
 
 Megalodon Support
 -----------------
@@ -28,16 +30,17 @@ Rerio research models can be run within megalodon by specifying the data directo
 
 ::
 
-   megalodon fast5s/ --guppy-params "-d ./rerio/" --guppy-config dna_r9.4.1_450bps_modbases_all-context_hac.cfg
+   megalodon fast5s/ --guppy-params "-d ./rerio/basecall_models/" \
+       --guppy-config research_dna_r9.4.1_modbases_all-context_hac.v1.cfg
 
 Models Summary
 --------------
 
-============================================== ======= ====== ============== ======== =============
-Config                                         DNA/RNA Pore   Device         Modbases Guppy Support
-============================================== ======= ====== ============== ======== =============
-dna_r9.4.1_450bps_modbases_all-context_hac.cfg DNA     R9.4.1 MinION/GridION 5mC, 6mA >=3.5        
-============================================== ======= ====== ============== ======== =============
+=================================================== ======= ====== ============== ========
+Config                                              DNA/RNA Pore   Device         Modbases
+=================================================== ======= ====== ============== ========
+research_dna_r9.4.1_modbases_all-context_hac.v1.cfg DNA     R9.4.1 MinION/GridION 5mC, 6mA
+=================================================== ======= ====== ============== ========
 
 Licence and Copyright
 ---------------------
