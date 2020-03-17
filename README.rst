@@ -21,7 +21,16 @@ Once downloaded, models can be run by specifying the guppy data path option (``-
    git clone https://github.com/nanoporetech/rerio
    ./ont-guppy/bin/guppy_basecaller -i fast5s/ -s basecalled_fast5s \
        -d ./rerio/basecall_models/ \
-       -c research_dna_r941_min_modbases-all-context.v1.cfg
+       -c res_dna_r941_min_modbases-all-context.v001.cfg
+
+Models Summary
+--------------
+
+============================================== ======= ====== ============== ========
+Config                                         DNA/RNA Pore   Device         Modbases
+============================================== ======= ====== ============== ========
+res_dna_r941_min_modbases-all-context.v001.cfg DNA     R9.4.1 MinION/GridION 5mC, 6mA
+============================================== ======= ====== ============== ========
 
 Megalodon Support
 -----------------
@@ -31,16 +40,7 @@ Rerio research models can be run within megalodon by specifying the data directo
 ::
 
    megalodon fast5s/ --guppy-params "-d ./rerio/basecall_models/" \
-       --guppy-config  research_dna_r9.4.1_modbases_all-context_hac.v1.cfg
-
-Models Summary
---------------
-
-==================================================== ======= ====== ============== ========
-Config                                               DNA/RNA Pore   Device         Modbases
-==================================================== ======= ====== ============== ========
- research_dna_r9.4.1_modbases_all-context_hac.v1.cfg DNA     R9.4.1 MinION/GridION 5mC, 6mA
-==================================================== ======= ====== ============== ========
+       --guppy-config res_dna_r941_min_modbases-all-context.v001.cfg
 
 Licence and Copyright
 ---------------------
