@@ -28,20 +28,20 @@ def main():
                             for fn in os.listdir(modeldir)
                             if os.path.splitext(fn)[1] == '']
 
-
     model_urls = []
     for stub_fn in args.model_stubs:
-        with open(stub_fn) as stub_fp:
-            try:
+        try:
+            with open(stub_fn)as stub_fp:
                 stub_lines = stub_fp.readlines()
-            except UnicodeDecodeError:
-                continue
-            if len(stub_lines) != 1:
-                sys.stderr.write(
-                    'Skipping invalid stub file: {}\n'.format(fn))
-                continue
+        except (IsADirectoryError, UnicodeDecodeError):
+            continue
 
-            model_urls.append((stub_lines[0].strip(), stub_fn))
+        if len(stub_lines) != 1:
+            sys.stderr.write(
+                'Skipping invalid stub file: {}\n'.format(fn))
+            continue
+
+        model_urls.append((stub_lines[0].strip(), stub_fn))
 
     sys.stderr.write('Models to download\n')
     for i, (_, stub_fn) in enumerate(model_urls):
