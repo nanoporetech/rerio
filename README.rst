@@ -7,14 +7,14 @@ Rerio
 """""
 
 Rerio contains "research release" basecalling models and configuration files.
-All models are compatible with guppy (see `community page <https://community.nanoporetech.com/downloads>`_ for download/install instructions).
-Since research models often utilise new features, the latest version of guppy may be need to be installed.
+All models are compatible with Guppy (see `community page <https://community.nanoporetech.com/downloads>`_ for download/install instructions).
+Since research models often utilise new features, the latest version of Guppy may be required.
 
 Installation
 ------------
 
 Rerio can be downloaded by cloning from github ``git clone https://github.com/nanoporetech/rerio``.
-Once rerio has been downloaded, models can be downloaded via the ``download_model.py`` script.
+Once Rerio has been downloaded, models can be downloaded via the ``download_model.py`` script.
 
 ::
 
@@ -23,7 +23,7 @@ Once rerio has been downloaded, models can be downloaded via the ``download_mode
    # Download specific model(s)
    rerio/download_model.py rerio/basecall_models/res_dna_r941_min_modbases-all-context_v001
 
-Once desired models have been downloaded, they can be run by specifying the guppy data path option (``-d`` or ``--data_path``) and selecting the desired config file (``-c`` or ``--config``).
+Once desired models have been downloaded, they can be run by specifying the Guppy data path option (``-d`` or ``--data_path``) and selecting the desired config file (``-c`` or ``--config``).
 
 ::
 
