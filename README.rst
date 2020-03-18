@@ -50,6 +50,16 @@ Rerio research models can be run within megalodon by specifying the data directo
    megalodon fast5s/ --guppy-params "-d ./rerio/basecall_models/" \
        --guppy-config res_dna_r941_min_modbases-all-context_v001.cfg
 
+Barcoding Support
+-----------------
+
+The Rerio github code repository includes a minimal barcoding stub to allow Guppy to run successfully.
+In order to enable full Guppy barcoding capabilities, all barcoding files must be transferred from the guppy data directory to the rerio data directory.
+
+::
+
+   cp ont-guppy/data/barcoding/* rerio/basecall_models/barcoding/
+
 Licence and Copyright
 ---------------------
 
