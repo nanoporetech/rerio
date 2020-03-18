@@ -1,8 +1,8 @@
+import argparse
 import os
 import sys
-from urllib import request
 import tarfile
-import argparse
+from urllib import request
 
 
 MODELS_DIR = 'basecall_models'
