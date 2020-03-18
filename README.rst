@@ -19,9 +19,9 @@ Once rerio has been downloaded, models can be downloaded via the ``download_mode
 ::
 
    # download all models
-   python3 download_model.py --download-all-models
+   python3 ./rerio/download_model.py --download-all-models
    # download specific model(s)
-   python3 download_model.py basecall_models/res_dna_r941_min_modbases-all-context.v001
+   python3 ./rerio/download_model.py ./rerio/basecall_models/res_dna_r941_min_modbases-all-context.v001
 
 Once desired models have been downloaded, they can be run by specifying the guppy data path option (``-d`` or ``--data_path``) and selecting the desired config file (``-c`` or ``--config``).
 
