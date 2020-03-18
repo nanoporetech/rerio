@@ -17,6 +17,7 @@ Rerio can be downloaded by cloning from github ``git clone https://github.com/na
 Once rerio has been downloaded, models can be downloaded via the ``download_model.py`` script.
 
 ::
+
    # Download all models
    rerio/download_model.py
    # Download specific model(s)
