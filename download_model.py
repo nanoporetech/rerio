@@ -25,8 +25,8 @@ def main():
     model_out_path = os.path.join(
         os.path.dirname(os.path.realpath(__file__)),
         MODELS_DIR)
+    model_urls = []
     if args.download_all_models:
-        model_urls = []
         for fn in os.listdir(model_out_path):
             if fn.endswith('cfg') or fn.endswith('jsn'):
                 continue

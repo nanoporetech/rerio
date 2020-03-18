@@ -14,11 +14,19 @@ Installation
 ------------
 
 Rerio can be downloaded by cloning from github ``git clone https://github.com/nanoporetech/rerio``.
-Once downloaded, models can be run by specifying the guppy data path option (``-d`` or ``--data_path``) and selecting the desired config file.
+Once rerio has been downloaded, models can be downloaded via the ``download_model.py`` script.
 
 ::
 
-   git clone https://github.com/nanoporetech/rerio
+   # download all models
+   python3 download_model.py --download-all-models
+   # download specific model(s)
+   python3 download_model.py basecall_models/res_dna_r941_min_modbases-all-context.v001
+
+Once desired models have been downloaded, they can be run by specifying the guppy data path option (``-d`` or ``--data_path``) and selecting the desired config file (``-c`` or ``--config``).
+
+::
+
    ./ont-guppy/bin/guppy_basecaller -i fast5s/ -s basecalled_fast5s \
        -d ./rerio/basecall_models/ \
        -c res_dna_r941_min_modbases-all-context.v001.cfg
