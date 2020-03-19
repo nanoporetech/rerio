@@ -59,6 +59,12 @@ In order to enable full Guppy barcoding capabilities, all barcoding files must b
 ::
 
    cp ont-guppy/data/barcoding/* rerio/basecall_models/barcoding/
+   
+Versioning
+----------
+Rerio is versioned by the minimum version of Guppy required to run _all_ models in the repository.  
+A new release of Rerio will be tagged when a model is added that requires a more recent version of Guppy.
+
 
 Licence and Copyright
 ---------------------
