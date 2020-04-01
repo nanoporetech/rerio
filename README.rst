@@ -40,6 +40,7 @@ Config                                         DNA/RNA Pore   Device         Mod
 res_dna_r941_min_modbases-all-context_v001.cfg DNA     R9.4.1 MinION/GridION 5mC, 6mA v3.5.1
 res_dna_r941_min_flipflop_v001.cfg             DNA     R9.4.1 MinION/GridION          v3.5.1
 res_dna_r103_min_flipflop_v001.cfg             DNA     R10.3  MinION/GridION          v3.5.1
+res_rna2_r941_min_flipflop_v001.cfg            RNA2    R9.4.1 MinION/GridION          v3.5.1
 ============================================== ======= ====== ============== ======== ===========
 
 Megalodon Support
