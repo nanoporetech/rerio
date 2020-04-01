@@ -34,13 +34,13 @@ Once desired models have been downloaded, they can be run by specifying the Gupp
 Models Summary
 --------------
 
-============================================== ======= ====== ============== ========
-Config                                         DNA/RNA Pore   Device         Modbases
-============================================== ======= ====== ============== ========
-res_dna_r941_min_modbases-all-context_v001.cfg DNA     R9.4.1 MinION/GridION 5mC, 6mA
-res_dna_r941_min_flipflop_v001.cfg             DNA     R9.4.1 MinION/GridION
-res_dna_r103_min_flipflop_v001.cfg             DNA     R10.3  MinION/GridION
-============================================== ======= ====== ============== ========
+============================================== ======= ====== ============== ======== ===========
+Config                                         DNA/RNA Pore   Device         Modbases First Added
+============================================== ======= ====== ============== ======== ===========
+res_dna_r941_min_modbases-all-context_v001.cfg DNA     R9.4.1 MinION/GridION 5mC, 6mA v3.5.1
+res_dna_r941_min_flipflop_v001.cfg             DNA     R9.4.1 MinION/GridION          v3.5.1
+res_dna_r103_min_flipflop_v001.cfg             DNA     R10.3  MinION/GridION          v3.5.1
+============================================== ======= ====== ============== ======== ===========
 
 Megalodon Support
 -----------------
