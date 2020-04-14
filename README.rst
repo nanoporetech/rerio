@@ -40,7 +40,7 @@ Input
 Output(s)
 ------
 
-- FASTQ or FASTA files - according to the basecalling model implemented
+- FASTQ files - these are the common output by most basecalling models, when implemented by Guppy executable
 - .hdf5 files - modified basecalling models may produce tabulated data as .hdf5 formats
 
 Dependencies
