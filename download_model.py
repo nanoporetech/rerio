@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
+
+import sys
+if sys.version_info[0] < 3:
+    raise Exception("Must be using Python 3")
+
 import argparse
 import os
-import sys
 import tarfile
 from urllib import request
 
