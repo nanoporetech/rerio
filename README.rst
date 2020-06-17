@@ -28,6 +28,7 @@ Getting started
 """""""""""""""
 
 Follow the instructions below to use research models with Guppy executable.
+See further details for running Guppy `here <https://community.nanoporetech.com/protocols/Guppy-protocol>`_.
 
 Dependencies
 ------------
@@ -88,7 +89,8 @@ Rerio research models can be run within megalodon by specifying the data directo
 ::
 
    megalodon fast5s/ --guppy-params "-d ./rerio/basecall_models/" \
-       --guppy-config res_dna_r941_min_modbases-all-context_v001.cfg
+       --guppy-config res_dna_r941_min_modbases_5mC_5hmC_CpG_v001.cfg \
+       --mod-motif mh CG 0
 
 Barcoding Support
 -----------------
