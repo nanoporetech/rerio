@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 
 import sys
-if sys.version_info[0] < 3:
-    raise Exception("Must be using Python 3")
-
 import argparse
 import os
 import tarfile
 from urllib import request
+
+if sys.version_info[0] < 3:
+    raise Exception("Must be using Python 3")
 
 
 MODELS_DIR = 'basecall_models'
@@ -42,14 +42,15 @@ def main():
 
         if len(stub_lines) != 1:
             sys.stderr.write(
-                'Skipping invalid stub file: {}\n'.format(fn))
+                'Skipping invalid stub file: {}\n'.format(stub_fn))
             continue
 
         model_urls.append((stub_lines[0].strip(), stub_fn))
 
     sys.stderr.write('Models to download\n')
     for i, (_, stub_fn) in enumerate(model_urls):
-        sys.stderr.write('{:3d}: {}\n'.format(i + 1, os.path.basename(stub_fn)))
+        sys.stderr.write('{:3d}: {}\n'.format(
+            i + 1, os.path.basename(stub_fn)))
 
     for model_url, stub_fn in model_urls:
         sys.stderr.write('Downloading {}\n'.format(os.path.basename(stub_fn)))
