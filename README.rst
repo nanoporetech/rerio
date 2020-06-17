@@ -105,7 +105,7 @@ In order to enable full Guppy barcoding capabilities, all barcoding files must b
 Help
 ----
 
-License and Copyright
+Licence and Copyright
 ---------------------
 
 |copy| 2020 Oxford Nanopore Technologies Ltd.
