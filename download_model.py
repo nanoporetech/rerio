@@ -52,15 +52,22 @@ def main():
         sys.stderr.write('{:3d}: {}\n'.format(
             i + 1, os.path.basename(stub_fn)))
 
+    download_failed = False
     for model_url, stub_fn in model_urls:
         sys.stderr.write('Downloading {}\n'.format(os.path.basename(stub_fn)))
         stub_tgz_fn = stub_fn + '.tgz'
-        with open(stub_tgz_fn, 'wb') as fp:
-            fp.write(request.urlopen(model_url).read())
-        with tarfile.open(stub_tgz_fn, 'r:gz') as tar_fp:
-            tar_fp.extractall(modeldir)
-        os.remove(stub_tgz_fn)
+        try:
+            with open(stub_tgz_fn, 'wb') as fp:
+                fp.write(request.urlopen(model_url).read())
+            with tarfile.open(stub_tgz_fn, 'r:gz') as tar_fp:
+                tar_fp.extractall(modeldir)
+            os.remove(stub_tgz_fn)
+        except:
+            sys.stderr.write('Error for {}\n'.format(os.path.basename(stub_fn)))
+            download_failed = True
+
+    return download_failed
 
 
 if __name__ == '__main__':
-    main()
+    exit(main())
