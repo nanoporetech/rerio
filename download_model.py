@@ -54,7 +54,8 @@ def main():
 
     download_failed = False
     for model_url, stub_fn in model_urls:
-        sys.stderr.write('Downloading {}\n'.format(os.path.basename(stub_fn)))
+        stub_base = os.path.basename(stub_fn)
+        sys.stderr.write('Downloading {}\n'.format(stub_base))
         stub_tgz_fn = stub_fn + '.tgz'
         try:
             with open(stub_tgz_fn, 'wb') as fp:
@@ -62,8 +63,8 @@ def main():
             with tarfile.open(stub_tgz_fn, 'r:gz') as tar_fp:
                 tar_fp.extractall(modeldir)
             os.remove(stub_tgz_fn)
-        except:
-            sys.stderr.write('Error for {}\n'.format(os.path.basename(stub_fn)))
+        except as e:
+            sys.stderr.write('Error for {} ({})\n'.format(stub_base, e))
             download_failed = True
 
     return download_failed
