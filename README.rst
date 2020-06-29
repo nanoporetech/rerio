@@ -75,6 +75,7 @@ res_dna_r941_min_modbases-all-context_v001.cfg  DNA     R9.4.1 MinION/GridION 5m
 res_dna_r941_min_flipflop_v001.cfg              DNA     R9.4.1 MinION/GridION None               v3.5.1
 res_dna_r941_min_rle_v001.cfg                   DNA     R9.4.1 MinION/GridION None               v3.5.1
 res_dna_r103_min_flipflop_v001.cfg              DNA     R10.3  MinION/GridION None               v3.5.1
+res_dna_r103_prom_rle_v001.cfg                  DNA     R10.3  PromethION     None               v3.5.1
 res_rna2_r941_min_flipflop_v001.cfg             RNA2    R9.4.1 MinION/GridION None               v3.5.1
 res_dna_r941_min_modbases_5mC_CpG_v001.cfg      DNA     R9.4.1 MinION/GridION 5mC (CpG)          v3.6.1
 res_dna_r941_prom_modbases_5mC_CpG_v001.cfg     DNA     R9.4.1 PromethION     5mC (CpG)          v3.6.1
