@@ -63,7 +63,7 @@ def main():
             with tarfile.open(stub_tgz_fn, 'r:gz') as tar_fp:
                 tar_fp.extractall(modeldir)
             os.remove(stub_tgz_fn)
-        except as e:
+        except Exception as e:
             sys.stderr.write('Error for {} ({})\n'.format(stub_base, e))
             download_failed = True
 
