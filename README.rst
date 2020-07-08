@@ -108,7 +108,7 @@ In order to enable full Guppy barcoding capabilities, all barcoding files must b
 *******
 
 Help
-----
+====
 
 Licence and Copyright
 ---------------------
