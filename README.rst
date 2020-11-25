@@ -82,6 +82,9 @@ res_rna2_r941_min_flipflop_v001.cfg             RNA2    R9.4.1 MinION/GridION v3
 res_dna_r941_min_modbases_5mC_CpG_v001.cfg      DNA     R9.4.1 MinION/GridION v3.6.1       5mC in CpG context
 res_dna_r941_prom_modbases_5mC_CpG_v001.cfg     DNA     R9.4.1 PromethION     v3.6.1       5mC in CpG context
 res_dna_r941_min_modbases_5mC_5hmC_CpG_v001.cfg DNA     R9.4.1 MinION/GridION v3.6.1       5hmC & 5mC in CpG context
+res_dna_r941_min_modbases_5mC_v001.cfg          DNA     R9.4.1 MinION/GridION v4.2.2       5mC in all context
+res_dna_r941_prom_modbases_5mC_v001.cfg         DNA     R9.4.1 PromethION     v4.2.2       5mC in all context
+res_dna_r103_prom_modbases_5mC_v001.cfg         DNA     R10.3  PromethION     v4.2.2       5mC in all context
 =============================================== ======= ====== ============== ============ ==========================
 
 Megalodon Support
