@@ -105,6 +105,20 @@ In order to enable full Guppy barcoding capabilities, all barcoding files must b
 
    cp ont-guppy/data/barcoding/* rerio/basecall_models/barcoding/
 
+Taiyaki Models
+--------------
+
+Taiyaki checkpoint files corresponding to Rerio research models are provided.
+Not all of these are compatible with the public release of Taiyaki.
+
+::
+
+    #  Download all models
+    python3 download_models.py --checkpoints
+    #  Download particular model
+    python3 download_models.py taiyaki_checkpoint/model
+
+
 *******
 
 Help

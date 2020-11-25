@@ -10,11 +10,14 @@ if sys.version_info[0] < 3:
     raise Exception("Must be using Python 3")
 
 
+CHECKPOINT_DIR = 'taiyaki_models'
 MODELS_DIR = 'basecall_models'
 
 
 def get_parser():
     parser = argparse.ArgumentParser(description='Download model files.')
+    parser.add_argument('--checkpoints', action='store_true',
+        help='Download Taiyaki checkpoints rather than Guppy models')
     parser.add_argument(
         'model_stubs', nargs='*',
         help='Path to model stubs found in `rerio/basecall_models/`.')
@@ -26,7 +29,8 @@ def main():
     args = get_parser().parse_args()
 
     rootdir = os.path.dirname(os.path.realpath(__file__))
-    modeldir = os.path.join(rootdir, MODELS_DIR)
+    modeldir = os.path.join(rootdir,
+                            CHECKPOINT_DIR if args.checkpoints else MODELS_DIR)
     if len(args.model_stubs) == 0:
         args.model_stubs = [os.path.join(modeldir, fn)
                             for fn in os.listdir(modeldir)
