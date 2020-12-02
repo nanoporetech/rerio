@@ -71,7 +71,10 @@ Use and description of models
 =============================================== ======= ====== ============== ============ ==========================
 Config                                          DNA/RNA Pore   Device         Tested Guppy Notes
 =============================================== ======= ====== ============== ============ ==========================
-res_dna_r941_min_modbases-all-context_v001.cfg  DNA     R9.4.1 MinION/GridION v3.5.1       5mC & 6mA in all contexts
+res_dna_r941_min_modbases_5mC_v001.cfg          DNA     R9.4.1 MinION/GridION v4.2.2       5mC in all context
+res_dna_r941_prom_modbases_5mC_v001.cfg         DNA     R9.4.1 PromethION     v4.2.2       5mC in all context
+res_dna_r103_prom_modbases_5mC_v001.cfg         DNA     R10.3  PromethION     v4.2.2       5mC in all context
+res_dna_r941_min_modbases_5mC_5hmC_v001.cfg     DNA     R9.4.1 MinION/GridION v4.2.2       5hmC & 5mC in all context
 res_dna_r941_min_flipflop_v001.cfg              DNA     R9.4.1 MinION/GridION v3.5.1
 res_dna_r941_min_dUfast_v001.cfg                DNA     R9.4.1 MinION/GridION v3.5.1       Calls dU as dT (fast)
 res_dna_r941_min_dUhac_v001.cfg                 DNA     R9.4.1 MinION/GridION v3.5.1       Calls dU as dT (high acc.)
@@ -79,12 +82,7 @@ res_dna_r941_min_rle_v001.cfg                   DNA     R9.4.1 MinION/GridION v3
 res_dna_r103_min_flipflop_v001.cfg              DNA     R10.3  MinION/GridION v3.5.1
 res_dna_r103_prom_rle_v001.cfg                  DNA     R10.3  PromethION     v3.5.1
 res_rna2_r941_min_flipflop_v001.cfg             RNA2    R9.4.1 MinION/GridION v3.5.1
-res_dna_r941_min_modbases_5mC_CpG_v001.cfg      DNA     R9.4.1 MinION/GridION v3.6.1       5mC in CpG context
-res_dna_r941_prom_modbases_5mC_CpG_v001.cfg     DNA     R9.4.1 PromethION     v3.6.1       5mC in CpG context
-res_dna_r941_min_modbases_5mC_5hmC_CpG_v001.cfg DNA     R9.4.1 MinION/GridION v3.6.1       5hmC & 5mC in CpG context
-res_dna_r941_min_modbases_5mC_v001.cfg          DNA     R9.4.1 MinION/GridION v4.2.2       5mC in all context
-res_dna_r941_prom_modbases_5mC_v001.cfg         DNA     R9.4.1 PromethION     v4.2.2       5mC in all context
-res_dna_r103_prom_modbases_5mC_v001.cfg         DNA     R10.3  PromethION     v4.2.2       5mC in all context
+res_dna_r941_min_modbases-all-context_v001.cfg  DNA     R9.4.1 MinION/GridION v3.5.1       5mC & 6mA in all contexts
 =============================================== ======= ====== ============== ============ ==========================
 
 Megalodon Support
