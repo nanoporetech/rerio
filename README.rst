@@ -71,8 +71,8 @@ Use and description of models
 =============================================== ======= ====== ============== ============ ==========================
 Config                                          DNA/RNA Pore   Device         Tested Guppy Notes
 =============================================== ======= ====== ============== ============ ==========================
-res_dna_r941_min_crf_v031.cfg                   DNA     R9.4.1 MinION/GridION v4.4.0       Bonito CRF
-res_dna_r103_min_crf_v030.cfg                   DNA     R10.3  MinION/GridION v4.4.0       Bonito CRF
+res_dna_r941_min_crf_v032.cfg                   DNA     R9.4.1 MinION/GridION v4.4.0       Bonito CRF
+res_dna_r103_min_crf_v032.cfg                   DNA     R10.3  MinION/GridION v4.4.0       Bonito CRF
 res_dna_r941_min_modbases_5mC_v001.cfg          DNA     R9.4.1 MinION/GridION v4.2.2       5mC in all context
 res_dna_r941_prom_modbases_5mC_v001.cfg         DNA     R9.4.1 PromethION     v4.2.2       5mC in all context
 res_dna_r103_prom_modbases_5mC_v001.cfg         DNA     R10.3  PromethION     v4.2.2       5mC in all context
