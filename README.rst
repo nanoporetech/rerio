@@ -131,7 +131,7 @@ Help
 Licence and Copyright
 ---------------------
 
-|copy| 2020 Oxford Nanopore Technologies Ltd.
+|copy| 2020, 2021 Oxford Nanopore Technologies Ltd.
 
 .. |copy| unicode:: 0xA9 .. copyright sign
 
