@@ -71,6 +71,7 @@ Use and description of models
 =============================================== ======= ====== ============== ============ ==========================
 Config                                          DNA/RNA Pore   Device         Tested Guppy Notes
 =============================================== ======= ====== ============== ============ ==========================
+res_dna_r9.4.1_e8.1_{fast,hac,sup}_v033.cfg     DNA     R9.4.1 All            v5.0.11      Kit 12 E8.1 CRF Models
 res_dna_r941_min_crf_v032.cfg                   DNA     R9.4.1 MinION/GridION v4.4.0       Bonito CRF
 res_dna_r103_min_crf_v032.cfg                   DNA     R10.3  MinION/GridION v4.4.0       Bonito CRF
 res_dna_r103_q20ea_crf_v033.cfg                 DNA     R10.3  PromethION     v5.0.11      Q20 early access CRF
