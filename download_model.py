@@ -12,12 +12,18 @@ if sys.version_info[0] < 3:
 
 CHECKPOINT_DIR = 'taiyaki_models'
 MODELS_DIR = 'basecall_models'
+CLAIR3_DIR = 'clair3_models'
 
 
 def get_parser():
     parser = argparse.ArgumentParser(description='Download model files.')
-    parser.add_argument('--checkpoints', action='store_true',
+
+    model_grp = parser.add_mutually_exclusive_group()
+    model_grp.add_argument('--checkpoints', action='store_true',
         help='Download Taiyaki checkpoints rather than Guppy models')
+    model_grp.add_argument('--clair3', action='store_true',
+        help='Download Clair3 models rather than Guppy models')
+
     parser.add_argument(
         'model_stubs', nargs='*',
         help='Path to model stubs found in `rerio/basecall_models/`.')
@@ -30,7 +36,7 @@ def main():
 
     rootdir = os.path.dirname(os.path.realpath(__file__))
     modeldir = os.path.join(rootdir,
-                            CHECKPOINT_DIR if args.checkpoints else MODELS_DIR)
+                            CHECKPOINT_DIR if args.checkpoints else CLAIR3_DIR if args.clair3 else MODELS_DIR)
     if len(args.model_stubs) == 0:
         args.model_stubs = [os.path.join(modeldir, fn)
                             for fn in os.listdir(modeldir)
