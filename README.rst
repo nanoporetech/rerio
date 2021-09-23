@@ -14,6 +14,9 @@ The research models provide cutting-edge functions, speeds and accuracies that h
 
 Models are provided for DNA and RNA, various pore types and to basecall different modified bases in a variety of contexts.
 
+Additionally, Rerio hosts research models for the short variant caller `Clair3 <https://github.com/HKU-BAL/Clair3>`_.
+
+
 Features
 --------
 
@@ -65,8 +68,8 @@ Once desired models have been downloaded, they can be run by specifying the Gupp
 
 **************
 
-Use and description of models
------------------------------
+Use and description of basecaller models
+----------------------------------------
 
 =============================================== ======= ====== ============== ============ ==========================
 Config                                          DNA/RNA Pore   Device         Tested Guppy Notes
@@ -124,6 +127,29 @@ Not all of these are compatible with the public release of Taiyaki.
     #  Download particular model
     python3 download_models.py taiyaki_checkpoint/model
 
+
+*********************
+
+Clair3 Models
+-------------
+
+Clair3 models for the following configurations are available:
+
+================== ========== ================
+Config             Chemistry  Guppy basecaller
+================== ========== ================
+r104_e81_sup_g5015 R10.4 E8.1 v5.0.15 SUP
+r104_e81_hac_g5015 R10.4 E8.1 v5.0.15 HAC
+================== ========== ================
+
+::
+
+    #  Download all models
+    python3 download_models.py --clair3
+    #  Download particular model
+    python3 download_models.py clair3_models/model
+
+Each model will be downloaded to the folder ``clair3_models/ont_{config}``.
 
 *******
 

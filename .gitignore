@@ -2,4 +2,6 @@
 *.tgz
 *.cfg
 *.jsn
+*.index
+*.data-*
 venv*/
