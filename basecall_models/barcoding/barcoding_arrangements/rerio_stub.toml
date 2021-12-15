@@ -1,0 +1,5 @@
+[loading_options]
+barcodes_filename = "../barcoding/rerio_stub.fasta"
+
+[arrangement]
+name = "stub_arrangement"
