@@ -145,9 +145,9 @@ r104_e81_hac_g5015 R10.4 E8.1 v5.0.15 HAC
 ::
 
     #  Download all models
-    python3 download_models.py --clair3
+    python3 download_model.py --clair3
     #  Download particular model
-    python3 download_models.py clair3_models/model
+    python3 download_model.py clair3_models/model
 
 Each model will be downloaded to the folder ``clair3_models/ont_{config}``.
 
