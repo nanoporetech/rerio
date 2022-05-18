@@ -13,20 +13,30 @@ if sys.version_info[0] < 3:
 CHECKPOINT_DIR = 'taiyaki_models'
 MODELS_DIR = 'basecall_models'
 CLAIR3_DIR = 'clair3_models'
+REMORA_DIR = 'remora_models'
 
 
 def get_parser():
     parser = argparse.ArgumentParser(description='Download model files.')
 
     model_grp = parser.add_mutually_exclusive_group()
-    model_grp.add_argument('--checkpoints', action='store_true',
-        help='Download Taiyaki checkpoints rather than Guppy models')
-    model_grp.add_argument('--clair3', action='store_true',
-        help='Download Clair3 models rather than Guppy models')
+    model_grp.add_argument(
+        '--checkpoints', action='store_true',
+        help='Download Taiyaki checkpoints rather than Guppy models'
+    )
+    model_grp.add_argument(
+        '--clair3', action='store_true',
+        help='Download Clair3 models rather than Guppy models'
+    )
+    model_grp.add_argument(
+        '--remora', action='store_true',
+        help='Download Remora models rather than Guppy models'
+    )
 
     parser.add_argument(
         'model_stubs', nargs='*',
-        help='Path to model stubs found in `rerio/basecall_models/`.')
+        help='Path to model stubs found in `rerio/basecall_models/`.'
+    )
 
     return parser
 
@@ -35,12 +45,19 @@ def main():
     args = get_parser().parse_args()
 
     rootdir = os.path.dirname(os.path.realpath(__file__))
-    modeldir = os.path.join(rootdir,
-                            CHECKPOINT_DIR if args.checkpoints else CLAIR3_DIR if args.clair3 else MODELS_DIR)
+    modeldir = os.path.join(
+        rootdir,
+        CHECKPOINT_DIR if args.checkpoints
+        else CLAIR3_DIR if args.clair3
+        else REMORA_DIR if args.remora
+        else MODELS_DIR
+    )
     if len(args.model_stubs) == 0:
-        args.model_stubs = [os.path.join(modeldir, fn)
-                            for fn in os.listdir(modeldir)
-                            if os.path.splitext(fn)[1] == '']
+        args.model_stubs = [
+            os.path.join(modeldir, fn)
+            for fn in os.listdir(modeldir)
+            if os.path.splitext(fn)[1] == ''
+        ]
 
     model_urls = []
     for stub_fn in args.model_stubs:

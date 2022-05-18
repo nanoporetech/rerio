@@ -7,15 +7,15 @@ Rerio
 """""
 
 Rerio is comprised of "research release" basecalling models and configuration files.
-All models are compatible with Guppy (see `Nanopore Community page <https://community.nanoporetech.com/downloads>`_ for download/install instructions).
+All basecalling models are compatible with Guppy (see `Nanopore Community page <https://community.nanoporetech.com/downloads>`_ for download/install instructions).
 Since research models often utilise new features, the latest version of Guppy may be required.
 
-The research models provide cutting-edge functions, speeds and accuracies that have not been productionised or validated by Oxford Nanopore Technologies in the Guppy executable basecaller. Nevertheless, models and config files can be run with the basecalling infrastructure in Guppy executable by using the instructions available in this repository.
+The research models provide cutting-edge functions, speeds and accuracies that have not been productionised or validated by Oxford Nanopore Technologies in the Guppy executable basecaller.
+Nevertheless, models and config files can be run with the basecalling infrastructure in Guppy executable by using the instructions available in this repository.
 
 Models are provided for DNA and RNA, various pore types and to basecall different modified bases in a variety of contexts.
 
 Additionally, Rerio hosts research models for the short variant caller `Clair3 <https://github.com/HKU-BAL/Clair3>`_.
-
 
 Features
 --------
@@ -56,15 +56,15 @@ Once Rerio has been downloaded, models can be downloaded via the ``download_mode
    # Download all models
    rerio/download_model.py
    # Download specific model(s)
-   rerio/download_model.py rerio/basecall_models/res_dna_r941_min_modbases-all-context_v001
+   rerio/download_model.py rerio/basecall_models/res_dna_r9.4.1_e8.1_sup_v033.cfg
 
 Once desired models have been downloaded, they can be run by specifying the Guppy data path option (``-d`` or ``--data_path``) and selecting the desired config file (``-c`` or ``--config``).
 
 ::
 
    ./ont-guppy/bin/guppy_basecaller -i fast5s/ -s basecalled_fast5s \
-       -d ./rerio/basecall_models/ \
-       -c res_dna_r941_min_modbases-all-context_v001.cfg
+      -d ./rerio/basecall_models/ \
+      -c res_dna_r9.4.1_e8.1_sup_v033.cfg
 
 **************
 
@@ -79,10 +79,6 @@ res_dna_r941_min_crf_v032.cfg                   DNA     R9.4.1 MinION/GridION v4
 res_dna_r103_min_crf_v032.cfg                   DNA     R10.3  MinION/GridION v4.4.0       Bonito CRF
 res_dna_r103_q20ea_crf_v033.cfg                 DNA     R10.3  PromethION     v5.0.11      Q20 early access CRF
 res_dna_r103_q20ea_crf_v034.cfg                 DNA     R10.3  PromethION     v5.0.11      Q20 early access CRF
-res_dna_r941_min_modbases_5mC_v001.cfg          DNA     R9.4.1 MinION/GridION v4.2.2       5mC in all context
-res_dna_r941_prom_modbases_5mC_v001.cfg         DNA     R9.4.1 PromethION     v4.2.2       5mC in all context
-res_dna_r103_prom_modbases_5mC_v001.cfg         DNA     R10.3  PromethION     v4.2.2       5mC in all context
-res_dna_r941_min_modbases_5mC_5hmC_v001.cfg     DNA     R9.4.1 MinION/GridION v4.2.2       5hmC & 5mC in all context
 res_dna_r941_min_flipflop_v001.cfg              DNA     R9.4.1 MinION/GridION v3.5.1
 res_dna_r941_min_dUfast_v001.cfg                DNA     R9.4.1 MinION/GridION v3.5.1       Calls dU as dT (fast)
 res_dna_r941_min_dUhac_v001.cfg                 DNA     R9.4.1 MinION/GridION v3.5.1       Calls dU as dT (high acc.)
@@ -90,7 +86,6 @@ res_dna_r941_min_rle_v001.cfg                   DNA     R9.4.1 MinION/GridION v3
 res_dna_r103_min_flipflop_v001.cfg              DNA     R10.3  MinION/GridION v3.5.1
 res_dna_r103_prom_rle_v001.cfg                  DNA     R10.3  PromethION     v3.5.1
 res_rna2_r941_min_flipflop_v001.cfg             RNA2    R9.4.1 MinION/GridION v3.5.1
-res_dna_r941_min_modbases-all-context_v001.cfg  DNA     R9.4.1 MinION/GridION v3.5.1       5mC & 6mA in all contexts
 =============================================== ======= ====== ============== ============ ==========================
 
 Megalodon Support
@@ -101,8 +96,7 @@ Rerio research models can be run within megalodon by specifying the data directo
 ::
 
    megalodon fast5s/ --guppy-params "-d ./rerio/basecall_models/" \
-       --guppy-config res_dna_r941_min_modbases_5mC_5hmC_CpG_v001.cfg \
-       --mod-motif mh CG 0
+       --guppy-config res_dna_r9.4.1_e8.1_sup_v033.cfg
 
 Barcoding Support
 -----------------
@@ -150,6 +144,28 @@ r104_e81_hac_g5015 R10.4 E8.1 v5.0.15 HAC
     python3 download_model.py clair3_models/model
 
 Each model will be downloaded to the folder ``clair3_models/ont_{config}``.
+
+*********************
+
+Remora Models
+-------------
+
+Most Remora models are supplied along with the `Remora repository <https://github.com/nanoporetech/remora>`_, but models with less validation intended for research purposes will be released in Rerio.
+
+=============================================== ======= ======== ============== ============ ==========================
+Config                                          DNA/RNA Pore     Device         Tested Guppy Notes
+=============================================== ======= ======== ============== ============ ==========================
+5mC_all_context_sup_r1041_e82                   DNA     R10.4.1  Any            v6.1.2       5mC in all context (with SUP basecaller)
+=============================================== ======= ======== ============== ============ ==========================
+
+::
+
+    #  Download all models
+    python3 download_model.py --remora
+    #  Download particular model
+    python3 download_model.py remora_models/5mC_all_context_sup_r1041_e82
+
+Each model will be downloaded to the folder ``remora_models/ont_{config}``.
 
 *******
 
