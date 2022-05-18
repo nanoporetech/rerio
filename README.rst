@@ -165,7 +165,7 @@ Config                                          DNA/RNA Pore     Device         
     #  Download particular model
     python3 download_model.py remora_models/5mC_all_context_sup_r1041_e82
 
-Each model will be downloaded to the folder ``clair3_models/ont_{config}``.
+Each model will be downloaded to the folder ``remora_models/ont_{config}``.
 
 *******
 
