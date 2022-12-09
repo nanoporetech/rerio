@@ -119,7 +119,7 @@ Not all of these are compatible with the public release of Taiyaki.
     #  Download all models
     python3 download_models.py --checkpoints
     #  Download particular model
-    python3 download_models.py taiyaki_checkpoint/model
+    python3 download_models.py --checkpoints taiyaki_checkpoint/model
 
 
 *********************
@@ -129,29 +129,33 @@ Clair3 Models
 
 Clair3 models for the following configurations are available:
 
-Current:
+Latest:
 
-========================== ============ ================
-Config                     Chemistry    Guppy basecaller
-========================== ============ ================
-r1041_e82_400bps_sup_g615  R10.4.1 E8.2 v6.1.5 SUP
-r1041_e82_400bps_hac_g632  R10.4.1 E8.2 v6.3.2 HAC
-r1041_e82_400bps_fast_g632 R10.4.1 E8.2 v6.3.2 FAST
-r1041_e82_260bps_sup_g632  R10.4.1 E8.2 v6.3.2 SUP
-r1041_e82_260bps_hac_g632  R10.4.1 E8.2 v6.3.2 HAC
-r1041_e82_260bps_fast_g632 R10.4.1 E8.2 v6.3.2 FAST
-r104_e81_sup_g5015         R10.4 E8.1   v5.0.15 SUP
-r104_e81_hac_g5015         R10.4 E8.1   v5.0.15 HAC
-========================== ============ ================
+========================== ============ ================ =======================
+Config                     Chemistry    Guppy basecaller Dorado basecaller model
+========================== ============ ================ =======================
+r1041_e82_400bps_sup_v400  R10.4.1 E8.2 -                v4.0.0 SUP
+r1041_e82_400bps_hac_v400  R10.4.1 E8.2 -                v4.0.0 HAC
+r1041_e82_400bps_fast_g632 R10.4.1 E8.2 v6.3.2 FAST      v3.5.2 FAST
+r1041_e82_260bps_sup_v400  R10.4.1 E8.2 -                v4.0.0 SUP
+r1041_e82_260bps_hac_v400  R10.4.1 E8.2 -                v4.0.0 HAC
+r1041_e82_260bps_fast_g632 R10.4.1 E8.2 v6.3.2 FAST      v3.5.2 FAST
+r104_e81_sup_g5015         R10.4 E8.1   v5.0.15 SUP      -
+r104_e81_hac_g5015         R10.4 E8.1   v5.0.15 HAC      -
+========================== ============ ================ =======================
 
 Deprecated:
 
-========================== ============ ================
-Config                     Chemistry    Guppy basecaller
-========================== ============ ================
-r1041_e82_400bps_hac_g615  R10.4.1 E8.2 v6.1.5 HAC
-r1041_e82_400bps_fast_g615 R10.4.1 E8.2 v6.1.5 FAST
-========================== ============ ================
+========================== ============ ================ =======================
+Config                     Chemistry    Guppy basecaller Dorado basecaller model
+========================== ============ ================ =======================
+r1041_e82_400bps_sup_g615  R10.4.1 E8.2 v6.1.5 SUP       v3.5.2 SUP
+r1041_e82_400bps_hac_g632  R10.4.1 E8.2 v6.3.2 HAC       v3.5.2 HAC
+r1041_e82_400bps_hac_g615  R10.4.1 E8.2 v6.1.5 HAC       -
+r1041_e82_400bps_fast_g615 R10.4.1 E8.2 v6.1.5 FAST      -
+r1041_e82_260bps_sup_g632  R10.4.1 E8.2 v6.3.2 SUP       v3.5.2 SUP
+r1041_e82_260bps_hac_g632  R10.4.1 E8.2 v6.3.2 HAC       v3.5.2 HAC
+========================== ============ ================ =======================
 
 
 
@@ -160,7 +164,7 @@ r1041_e82_400bps_fast_g615 R10.4.1 E8.2 v6.1.5 FAST
     #  Download all models
     python3 download_model.py --clair3
     #  Download particular model
-    python3 download_model.py clair3_models/{config}_model
+    python3 download_model.py --clair3 clair3_models/{config}_model
 
 Each model will be downloaded to the folder ``clair3_models/{config}``.
 
@@ -182,7 +186,7 @@ Config                                          DNA/RNA Pore     Device         
     #  Download all models
     python3 download_model.py --remora
     #  Download particular model
-    python3 download_model.py remora_models/5mC_all_context_sup_r1041_e82
+    python3 download_model.py --remora remora_models/5mC_all_context_sup_r1041_e82
 
 Each model will be downloaded to ``remora_models/{config}.onnx``.
 
