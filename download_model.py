@@ -14,6 +14,7 @@ CHECKPOINT_DIR = 'taiyaki_models'
 MODELS_DIR = 'basecall_models'
 CLAIR3_DIR = 'clair3_models'
 REMORA_DIR = 'remora_models'
+DORADO_DIR = 'dorado_models'
 
 
 def get_parser():
@@ -31,6 +32,10 @@ def get_parser():
     model_grp.add_argument(
         '--remora', action='store_true',
         help='Download Remora models rather than Guppy models'
+    )
+    model_grp.add_argument(
+        '--dorado', action='store_true',
+        help='Download Dorado models rather than Guppy models'
     )
 
     parser.add_argument(
@@ -50,6 +55,7 @@ def main():
         CHECKPOINT_DIR if args.checkpoints
         else CLAIR3_DIR if args.clair3
         else REMORA_DIR if args.remora
+        else DORADO_DIR if args.dorado
         else MODELS_DIR
     )
     if len(args.model_stubs) == 0:
