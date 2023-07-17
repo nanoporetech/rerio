@@ -59,11 +59,18 @@ def main():
         else MODELS_DIR
     )
     if len(args.model_stubs) == 0:
-        args.model_stubs = [
-            os.path.join(modeldir, fn)
-            for fn in os.listdir(modeldir)
-            if os.path.splitext(fn)[1] == ''
-        ]
+        if args.dorado:
+            args.model_stubs = [
+                os.path.join(modeldir, fn)
+                for fn in os.listdir(modeldir)
+                if fn.endswith("_url")
+            ]
+        else:
+            args.model_stubs = [
+                os.path.join(modeldir, fn)
+                for fn in os.listdir(modeldir)
+                if os.path.splitext(fn)[1] == ''
+            ]
 
     model_urls = []
     for stub_fn in args.model_stubs:
