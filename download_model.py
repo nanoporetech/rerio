@@ -5,6 +5,7 @@ import argparse
 import os
 import tarfile
 from urllib import request
+from zipfile import ZipFile
 
 if sys.version_info[0] < 3:
     raise Exception("Must be using Python 3")
@@ -95,16 +96,27 @@ def main():
     download_failed = False
     for model_url, stub_fn in model_urls:
         stub_base = os.path.basename(stub_fn)
-        stub_tgz_fn = stub_fn + '.tgz'
-        sys.stderr.write('Downloading {} to {}\n'.format(stub_base, stub_tgz_fn))
+        tmp_file = stub_fn + '.tmp'
+
         modeldir = os.path.dirname(stub_fn)
         try:
-            with open(stub_tgz_fn, 'wb') as fp:
+            # First download the model
+            sys.stderr.write('Downloading {} to {}\n'.format(stub_base, tmp_file))
+            with open(tmp_file, 'wb') as fp:
                 fp.write(request.urlopen(model_url).read())
-            with tarfile.open(stub_tgz_fn, 'r:gz') as tar_fp:
-                sys.stderr.write('Extracting {} to {}/\n'.format(stub_tgz_fn, modeldir))
-                tar_fp.extractall(modeldir)
-            os.remove(stub_tgz_fn)
+
+            # Then decompress based on file-type
+            sys.stderr.write('Extracting to {}\n'.format(stub_fn))
+            file_ext = model_url.split(".")[-1]
+            if file_ext in ("gz", "tgz"):
+                with tarfile.open(tmp_file, 'r:gz') as tar_fp:
+                    tar_fp.extractall(modeldir)
+            elif file_ext == "zip":
+                with ZipFile(tmp_file, 'r') as zip_ref:
+                    zip_ref.extractall(modeldir)
+            else:
+                sys.stderr.write("Unknown file-extension '{}'\n".format(file_ext))
+            os.remove(tmp_file)
         except Exception as e:
             sys.stderr.write('Error for {} ({})\n'.format(stub_base, e))
             download_failed = True
