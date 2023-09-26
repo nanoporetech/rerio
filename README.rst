@@ -51,19 +51,107 @@ Once Rerio has been downloaded, models can be downloaded via the ``download_mode
    # Download all models
    rerio/download_model.py
    # Download specific model(s)
-   rerio/download_model.py rerio/basecall_models/res_dna_r9.4.1_e8.1_sup_v033.cfg
+   rerio/download_model.py rerio/dorado_models/res_dna_r10.4.1_e8.2_400bps_sup@v4.0.1_url
 
-Once desired models have been downloaded, they can be run by specifying the Guppy data path option (``-d`` or ``--data_path``) and selecting the desired config file (``-c`` or ``--config``).
+*******************
+
+Dorado Models
+-------------
+
+================================================================== ======= ============ ====== ============= ==================================================================================
+Config                                                             DNA/RNA Chemistry    Device Tested Dorado Notes
+================================================================== ======= ============ ====== ============= ==================================================================================
+res_dna_r10.4.1_e8.2_400bps_sup@2023-09-22_bacterial-methylation   DNA     R10.4.1 E8.2 All    v0.3.4        Kit 14 5kHz Research model with an increased range of bacterial methylation motifs
+res_dna_r10.4.1_e8.2_400bps_sup@v4.0.1                             DNA     R10.4.1 E8.2 All    v0.3.0        Kit 14 4kHz Model Compatible with All-context Modified Bases
+res_dna_r10.4.1_e8.2_400bps_sup@v4.0.1_5mC@v2                      DNA     R10.4.1 E8.2 All    v0.3.0        Kit 14 4kHz 5mC All-context Modified Base Model
+res_dna_r10.4.1_e8.2_400bps_sup@v4.0.1_6mA@v2                      DNA     R10.4.1 E8.2 All    v0.3.0        Kit 14 4kHz 6mA All-context Modified Base Model
+================================================================== ======= ============ ====== ============= ==================================================================================
 
 ::
 
-   ./ont-guppy/bin/guppy_basecaller -i fast5s/ -s basecalled_fast5s \
-      -d ./rerio/basecall_models/ \
-      -c res_dna_r9.4.1_e8.1_sup_v033.cfg
+    #  Download all models
+    python3 download_model.py --dorado
+    #  Download particular model
+    python3 download_model.py --dorado dorado_models/res_dna_r10.4.1_e8.2_400bps_sup@v4.0.1*
 
-**************
+Each model will be downloaded to ``dorado_models/{config}``.
 
-Use and description of basecaller models
+Basecalling models can be supplied directly to `Dorado <https://github.com/nanoporetech/dorado>`_ and modified base models can be supplied via the ``--modified-bases-models`` argument.
+
+
+*********************
+
+Clair3 Models
+-------------
+
+Clair3 models for the following configurations are available:
+
+Latest:
+
+========================== =================== =======================
+Config                     Chemistry           Dorado basecaller model
+========================== =================== =======================
+r1041_e82_400bps_sup_v420  R10.4.1 E8.2 (5kHz) v4.2.0 SUP
+r1041_e82_400bps_hac_v420  R10.4.1 E8.2 (5kHz) v4.2.0 HAC
+r1041_e82_400bps_sup_v410  R10.4.1 E8.2 (4kHz) v4.1.0 SUP
+r1041_e82_400bps_hac_v410  R10.4.1 E8.2 (4kHz) v4.1.0 HAC
+r1041_e82_400bps_fast_g632 R10.4.1 E8.2 (4kHz) v3.5.2 FAST
+========================== =================== =======================
+
+Deprecated:
+
+========================== ============ ================ =======================
+Config                     Chemistry    Guppy basecaller Dorado basecaller model
+========================== ============ ================ =======================
+r1041_e82_260bps_sup_v400  R10.4.1 E8.2 -                v4.0.0 SUP
+r1041_e82_260bps_hac_v400  R10.4.1 E8.2 -                v4.0.0 HAC
+r1041_e82_260bps_fast_g632 R10.4.1 E8.2 v6.3.2 FAST      v3.5.2 FAST
+r1041_e82_400bps_sup_g615  R10.4.1 E8.2 v6.1.5 SUP       v3.5.2 SUP
+r1041_e82_400bps_hac_g632  R10.4.1 E8.2 v6.3.2 HAC       v3.5.2 HAC
+r1041_e82_400bps_hac_g615  R10.4.1 E8.2 v6.1.5 HAC       -
+r1041_e82_400bps_fast_g615 R10.4.1 E8.2 v6.1.5 FAST      -
+r1041_e82_260bps_sup_g632  R10.4.1 E8.2 v6.3.2 SUP       v3.5.2 SUP
+r1041_e82_260bps_hac_g632  R10.4.1 E8.2 v6.3.2 HAC       v3.5.2 HAC
+r104_e81_sup_g5015         R10.4 E8.1   v5.0.15 SUP      -
+r104_e81_hac_g5015         R10.4 E8.1   v5.0.15 HAC      -
+========================== ============ ================ =======================
+
+::
+
+    #  Download all models
+    python3 download_model.py --clair3
+    #  Download particular model
+    python3 download_model.py --clair3 clair3_models/{config}_model
+
+Each model will be downloaded to the folder ``clair3_models/{config}``.
+
+*********************
+
+Remora Models
+-------------
+
+Most Remora models are supplied along with the `Remora repository <https://github.com/nanoporetech/remora>`_, but models with less validation intended for research purposes will be released in Rerio.
+
+=============================================== ======= ======== ============== ============ ==========================
+Config                                          DNA/RNA Pore     Device         Tested Guppy Notes
+=============================================== ======= ======== ============== ============ ==========================
+5mC_all_context_sup_r1041_e82                   DNA     R10.4.1  Any            v6.1.2       5mC in all context (with SUP basecaller)
+=============================================== ======= ======== ============== ============ ==========================
+
+::
+
+    #  Download all models
+    python3 download_model.py --remora
+    #  Download particular model
+    python3 download_model.py --remora remora_models/5mC_all_context_sup_r1041_e82
+
+Each model will be downloaded to ``remora_models/{config}.pt`` (or ``remora_models/{config}.onnx`` for Remora version <2.0).
+
+These models can be supplied directly to `Bonito <https://github.com/nanoporetech/bonito>`_ via the ``--modified-base-model`` argument.
+
+*******************
+
+Guppy models
 ----------------------------------------
 
 This section contains research release Guppy compatible models.
@@ -109,103 +197,6 @@ Not all of these are compatible with the public release of Taiyaki.
     python3 download_models.py --checkpoints
     #  Download particular model
     python3 download_models.py --checkpoints taiyaki_checkpoint/model
-
-
-*********************
-
-Clair3 Models
--------------
-
-Clair3 models for the following configurations are available:
-
-Latest:
-
-========================== =================== =======================
-Config                     Chemistry           Dorado basecaller model
-========================== =================== =======================
-r1041_e82_400bps_sup_v420  R10.4.1 E8.2 (5kHz) v4.2.0 SUP
-r1041_e82_400bps_hac_v420  R10.4.1 E8.2 (5kHz) v4.2.0 HAC
-r1041_e82_400bps_sup_v410  R10.4.1 E8.2 (4kHz) v4.1.0 SUP
-r1041_e82_400bps_hac_v410  R10.4.1 E8.2 (4kHz) v4.1.0 HAC
-r1041_e82_400bps_fast_g632 R10.4.1 E8.2 (4kHz) v3.5.2 FAST
-========================== =================== =======================
-
-Deprecated:
-
-========================== ============ ================ =======================
-Config                     Chemistry    Guppy basecaller Dorado basecaller model
-========================== ============ ================ =======================
-r1041_e82_260bps_sup_v400  R10.4.1 E8.2 -                v4.0.0 SUP
-r1041_e82_260bps_hac_v400  R10.4.1 E8.2 -                v4.0.0 HAC
-r1041_e82_260bps_fast_g632 R10.4.1 E8.2 v6.3.2 FAST      v3.5.2 FAST
-r1041_e82_400bps_sup_g615  R10.4.1 E8.2 v6.1.5 SUP       v3.5.2 SUP
-r1041_e82_400bps_hac_g632  R10.4.1 E8.2 v6.3.2 HAC       v3.5.2 HAC
-r1041_e82_400bps_hac_g615  R10.4.1 E8.2 v6.1.5 HAC       -
-r1041_e82_400bps_fast_g615 R10.4.1 E8.2 v6.1.5 FAST      -
-r1041_e82_260bps_sup_g632  R10.4.1 E8.2 v6.3.2 SUP       v3.5.2 SUP
-r1041_e82_260bps_hac_g632  R10.4.1 E8.2 v6.3.2 HAC       v3.5.2 HAC
-r104_e81_sup_g5015         R10.4 E8.1   v5.0.15 SUP      -
-r104_e81_hac_g5015         R10.4 E8.1   v5.0.15 HAC      -
-========================== ============ ================ =======================
-
-
-
-::
-
-    #  Download all models
-    python3 download_model.py --clair3
-    #  Download particular model
-    python3 download_model.py --clair3 clair3_models/{config}_model
-
-Each model will be downloaded to the folder ``clair3_models/{config}``.
-
-*********************
-
-Remora Models
--------------
-
-Most Remora models are supplied along with the `Remora repository <https://github.com/nanoporetech/remora>`_, but models with less validation intended for research purposes will be released in Rerio.
-
-=============================================== ======= ======== ============== ============ ==========================
-Config                                          DNA/RNA Pore     Device         Tested Guppy Notes
-=============================================== ======= ======== ============== ============ ==========================
-5mC_all_context_sup_r1041_e82                   DNA     R10.4.1  Any            v6.1.2       5mC in all context (with SUP basecaller)
-=============================================== ======= ======== ============== ============ ==========================
-
-::
-
-    #  Download all models
-    python3 download_model.py --remora
-    #  Download particular model
-    python3 download_model.py --remora remora_models/5mC_all_context_sup_r1041_e82
-
-Each model will be downloaded to ``remora_models/{config}.pt`` (or ``remora_models/{config}.onnx`` for Remora version <2.0).
-
-These models can be supplied directly to `Bonito <https://github.com/nanoporetech/bonito>`_ via the ``--modified-base-model`` argument.
-
-*******
-
-Dorado Models
--------------
-
-============================================= ======= ============ ====== ============= ============================================================
-Config                                        DNA/RNA Chemistry    Device Tested Dorado Notes
-============================================= ======= ============ ====== ============= ============================================================
-res_dna_r10.4.1_e8.2_400bps_sup@v4.0.1        DNA     R10.4.1 E8.2 All    v0.3.0        Kit 14 4kHz Model Compatible with All-context Modified Bases
-res_dna_r10.4.1_e8.2_400bps_sup@v4.0.1_5mC@v2 DNA     R10.4.1 E8.2 All    v0.3.0        Kit 14 4kHz 5mC All-context Modified Base Model
-res_dna_r10.4.1_e8.2_400bps_sup@v4.0.1_6mA@v2 DNA     R10.4.1 E8.2 All    v0.3.0        Kit 14 4kHz 6mA All-context Modified Base Model
-============================================= ======= ============ ====== ============= ============================================================
-
-::
-
-    #  Download all models
-    python3 download_model.py --dorado
-    #  Download particular model
-    python3 download_model.py --dorado dorado_models/res_dna_r10.4.1_e8.2_400bps_sup@v4.0.1*
-
-Each model will be downloaded to ``dorado_models/{config}``.
-
-Basecalling models can be supplied directly to `Dorado <https://github.com/nanoporetech/dorado>`_ and modified base models can be supplied via the ``--modified-bases-models`` argument.
 
 Licence and Copyright
 ---------------------
