@@ -25,8 +25,8 @@ Features
 Getting started
 """""""""""""""
 
-Follow the instructions below to use research models with Guppy executable.
-See further details for running Guppy `here <https://community.nanoporetech.com/protocols/Guppy-protocol>`_.
+Follow the instructions below to use research models with Dorado executable.
+See further details for running Dorado `here <https://github.com/nanoporetech/dorado>`_.
 
 Dependencies
 ------------
@@ -34,10 +34,7 @@ Dependencies
 You will require:
 
 - Python-compatible environment (e.g. Terminal)
-- The most recent Guppy version, available on the Nanopore Community `Software downloads page <https://community.nanoporetech.com/downloads>`_.
-
-**Note:** Rerio is versioned by the minimum version of Guppy required to run _all_ models in the repository. 
-A new release of Rerio will be tagged when a model is added that requires a more recent version of Guppy.
+- The most recent Dorado version, available on the Nanopore Community `Software downloads page <https://community.nanoporetech.com/downloads>`_ or the `Dorado GitHub page <https://github.com/nanoporetech/dorado>`_.
 
 
 Installation
@@ -58,14 +55,14 @@ Once Rerio has been downloaded, models can be downloaded via the ``download_mode
 Dorado Models
 -------------
 
-================================================================== ======= ============ ====== ============= ==================================================================================
-Config                                                             DNA/RNA Chemistry    Device Tested Dorado Notes
-================================================================== ======= ============ ====== ============= ==================================================================================
-res_dna_r10.4.1_e8.2_400bps_sup@2023-09-22_bacterial-methylation   DNA     R10.4.1 E8.2 All    v0.3.4        Kit 14 5kHz Research model with an increased range of bacterial methylation motifs
-res_dna_r10.4.1_e8.2_400bps_sup@v4.0.1                             DNA     R10.4.1 E8.2 All    v0.3.0        Kit 14 4kHz Model Compatible with All-context Modified Bases
-res_dna_r10.4.1_e8.2_400bps_sup@v4.0.1_5mC@v2                      DNA     R10.4.1 E8.2 All    v0.3.0        Kit 14 4kHz 5mC All-context Modified Base Model
-res_dna_r10.4.1_e8.2_400bps_sup@v4.0.1_6mA@v2                      DNA     R10.4.1 E8.2 All    v0.3.0        Kit 14 4kHz 6mA All-context Modified Base Model
-================================================================== ======= ============ ====== ============= ==================================================================================
+==================================================================== ======= ============ ====== ============= ==================================================================================
+Config                                                               DNA/RNA Chemistry    Device Tested Dorado Notes
+==================================================================== ======= ============ ====== ============= ==================================================================================
+res_dna_r10.4.1_e8.2_400bps_sup\@2023-09-22_bacterial-methylation    DNA     R10.4.1 E8.2 All    v0.3.4        Kit 14 5kHz Research model with an increased range of bacterial methylation motifs
+res_dna_r10.4.1_e8.2_400bps_sup\@v4.0.1                              DNA     R10.4.1 E8.2 All    v0.3.0        Kit 14 4kHz Model Compatible with All-context Modified Bases
+res_dna_r10.4.1_e8.2_400bps_sup\@v4.0.1_5mC@v2                       DNA     R10.4.1 E8.2 All    v0.3.0        Kit 14 4kHz 5mC All-context Modified Base Model
+res_dna_r10.4.1_e8.2_400bps_sup\@v4.0.1_6mA@v2                       DNA     R10.4.1 E8.2 All    v0.3.0        Kit 14 4kHz 6mA All-context Modified Base Model
+==================================================================== ======= ============ ====== ============= ==================================================================================
 
 ::
 
@@ -76,7 +73,7 @@ res_dna_r10.4.1_e8.2_400bps_sup@v4.0.1_6mA@v2                      DNA     R10.4
 
 Each model will be downloaded to ``dorado_models/{config}``.
 
-Basecalling models can be supplied directly to `Dorado <https://github.com/nanoporetech/dorado>`_ and modified base models can be supplied via the ``--modified-bases-models`` argument.
+Basecalling models can be supplied directly to `Dorado <https://github.com/nanoporetech/dorado>`_. Please refer to the Dorado README for more information on how to run basecalling and use modified base models. 
 
 
 *********************
