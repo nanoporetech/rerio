@@ -70,7 +70,7 @@ res_dna_r10.4.1_e8.2_400bps_sup\@v4.3.0_4mC_5mC@v1                   DNA     R10
     #  Download all models
     python3 download_model.py --dorado
     #  Download particular model
-    python3 download_model.py --dorado dorado_models/res_dna_r10.4.1_e8.2_400bps_sup\@v4.3.0_4mC_5mC@v1_url
+    python3 download_model.py --dorado dorado_models/res_dna_r10.4.1_e8.2_400bps_sup@v4.3.0_4mC_5mC@v1_url
 
 Each model will be downloaded to ``dorado_models/{config}``.
 
