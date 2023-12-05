@@ -62,6 +62,7 @@ res_dna_r10.4.1_e8.2_400bps_sup\@2023-09-22_bacterial-methylation    DNA     R10
 res_dna_r10.4.1_e8.2_400bps_sup\@v4.0.1                              DNA     R10.4.1 E8.2 All    v0.3.0        Kit 14 4kHz Model Compatible with All-context Modified Bases
 res_dna_r10.4.1_e8.2_400bps_sup\@v4.0.1_5mC@v2                       DNA     R10.4.1 E8.2 All    v0.3.0        Kit 14 4kHz 5mC All-context Modified Base Model
 res_dna_r10.4.1_e8.2_400bps_sup\@v4.0.1_6mA@v2                       DNA     R10.4.1 E8.2 All    v0.3.0        Kit 14 4kHz 6mA All-context Modified Base Model
+res_dna_r10.4.1_e8.2_400bps_sup\@v4.3.0_4mC_5mC@v1                   DNA     R10.4.1 E8.2 All    v0.4.3        Kit 14 4kHz 4mC+5mC All-context Modified Base Model
 ==================================================================== ======= ============ ====== ============= ==================================================================================
 
 ::
@@ -69,7 +70,7 @@ res_dna_r10.4.1_e8.2_400bps_sup\@v4.0.1_6mA@v2                       DNA     R10
     #  Download all models
     python3 download_model.py --dorado
     #  Download particular model
-    python3 download_model.py --dorado dorado_models/res_dna_r10.4.1_e8.2_400bps_sup@v4.0.1*
+    python3 download_model.py --dorado dorado_models/res_dna_r10.4.1_e8.2_400bps_sup\@v4.3.0_4mC_5mC@v1_url
 
 Each model will be downloaded to ``dorado_models/{config}``.
 
