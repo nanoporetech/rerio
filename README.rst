@@ -128,6 +128,9 @@ r104_e81_hac_g5015         R10.4 E8.1          -                       v5.0.15 H
 
 Each model will be downloaded to the folder ``clair3_models/{config}``.
 
+All models are compatible with Clair3 v1.x but not v2.x.
+The Clair3 developers have converted these models to be compatible with v2.x, see `this release note <https://github.com/HKU-BAL/Clair3#v200--feb-9-2026--major-release>` for details.
+
 *********************
 
 Remora Models
