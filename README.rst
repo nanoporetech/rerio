@@ -90,7 +90,7 @@ Latest:
 Config                     Chemistry           Dorado basecaller model
 ========================== =================== =======================
 r1041_e82_400bps_sup_v520  R10.4.1 E8.2 (5kHz) v5.2.0 SUP
-r1041_e82_400bps_hac_v520  R10.4.1 E8.2 (5kHz) v5.2.0 HAC
+r1041_e82_400bps_hac_v600  R10.4.1 E8.2 (5kHz) v6.0.0 HAC
 r1041_e82_400bps_sup_v410  R10.4.1 E8.2 (4kHz) v4.1.0 SUP
 r1041_e82_400bps_hac_v410  R10.4.1 E8.2 (4kHz) v4.1.0 HAC
 ========================== =================== =======================
@@ -100,6 +100,7 @@ Deprecated:
 ========================== =================== ======================= ================
 Config                     Chemistry           Dorado basecaller model Guppy basecaller
 ========================== =================== ======================= ================
+r1041_e82_400bps_hac_v520  R10.4.1 E8.2 (5kHz) v5.2.0 HAC
 r1041_e82_400bps_sup_v430  R10.4.1 E8.2 (5kHz) v4.3.0 SUP                              
 r1041_e82_400bps_hac_v430  R10.4.1 E8.2 (5kHz) v4.3.0 HAC                              
 r1041_e82_400bps_sup_v420  R10.4.1 E8.2 (5kHz) v4.2.0 SUP                              
@@ -126,6 +127,9 @@ r104_e81_hac_g5015         R10.4 E8.1          -                       v5.0.15 H
     python3 download_model.py --clair3 clair3_models/{config}_model
 
 Each model will be downloaded to the folder ``clair3_models/{config}``.
+
+All models are compatible with Clair3 v1.x but not v2.x.
+The Clair3 developers have converted these models to be compatible with v2.x, see `this release note <https://github.com/HKU-BAL/Clair3#v200--feb-9-2026--major-release>` for details.
 
 *********************
 
