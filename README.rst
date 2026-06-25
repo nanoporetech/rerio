@@ -1,12 +1,9 @@
-.. image:: /ONT_logo.png
-  :width: 800
-
 ******************
 
 Rerio
 """""
 
-Rerio is comprised of "research release" basecalling models and configuration files.
+Rerio is comprised of "research release" basecalling models and configuration files for Oxford Nanopore data.
 
 The research models provide cutting-edge functions, speeds and accuracies that have not been productionised or validated by Oxford Nanopore Technologies.
 Nevertheless, models and config files can be run by using the instructions available in this repository.
@@ -207,12 +204,12 @@ Not all of these are compatible with the public release of Taiyaki.
 Licence and Copyright
 ---------------------
 
-|copy| 2020-2023 Oxford Nanopore Technologies Ltd.
+|copy| 2026 Oxford Nanopore Technologies PLC.
 
 .. |copy| unicode:: 0xA9 .. copyright sign
 
 Rerio is distributed under the terms of the Oxford Nanopore
-Technologies, Ltd.  Public License, v. 1.0.  If a copy of the License
+Technologies, PLC.  Public License, v. 1.0.  If a copy of the License
 was not distributed with this file, You can obtain one at
 http://nanoporetech.com
 
