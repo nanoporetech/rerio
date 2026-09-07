@@ -83,14 +83,15 @@ Clair3 models for the following configurations are available:
 
 Latest:
 
-========================== =================== =======================
-Config                     Chemistry           Dorado basecaller model
-========================== =================== =======================
-r1041_e82_400bps_sup_v520  R10.4.1 E8.2 (5kHz) v5.2.0 SUP
-r1041_e82_400bps_hac_v600  R10.4.1 E8.2 (5kHz) v6.0.0 HAC
-r1041_e82_400bps_sup_v410  R10.4.1 E8.2 (4kHz) v4.1.0 SUP
-r1041_e82_400bps_hac_v410  R10.4.1 E8.2 (4kHz) v4.1.0 HAC
-========================== =================== =======================
+================================= =================== =======================
+Config                            Chemistry           Dorado basecaller model
+================================= =================== =======================
+r1041_e82_400bps_sup_v520         R10.4.1 E8.2 (5kHz) v5.2.0 SUP
+r1041_e82_400bps_hac_v600         R10.4.1 E8.2 (5kHz) v6.0.0 HAC
+r1041_e82_400bps_sup_v410         R10.4.1 E8.2 (4kHz) v4.1.0 SUP
+r1041_e82_400bps_hac_v410         R10.4.1 E8.2 (4kHz) v4.1.0 HAC
+r1041_e82_400bps_prom_plus_hac_v1 Prom Plus (5kHz)    v1 HAC Prom Plus
+================================= =================== =======================
 
 Deprecated:
 
