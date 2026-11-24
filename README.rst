@@ -87,7 +87,7 @@ Latest:
 Config                            Chemistry           Dorado basecaller model
 ================================= =================== =======================
 r1041_e82_400bps_sup_v520         R10.4.1 E8.2 (5kHz) v5.2.0 SUP
-r1041_e82_400bps_hac_v600         R10.4.1 E8.2 (5kHz) v6.0.0 HAC
+r1041_e82_400bps_hac_v610         R10.4.1 E8.2 (5kHz) v6.1.0 HAC
 r1041_e82_400bps_sup_v410         R10.4.1 E8.2 (4kHz) v4.1.0 SUP
 r1041_e82_400bps_hac_v410         R10.4.1 E8.2 (4kHz) v4.1.0 HAC
 r1041_e82_400bps_prom_plus_hac_v1 Prom Plus (5kHz)    v1 HAC Prom Plus
@@ -98,6 +98,7 @@ Deprecated:
 ========================== =================== ======================= ================
 Config                     Chemistry           Dorado basecaller model Guppy basecaller
 ========================== =================== ======================= ================
+r1041_e82_400bps_hac_v600  R10.4.1 E8.2 (5kHz) v6.0.0 HAC
 r1041_e82_400bps_hac_v520  R10.4.1 E8.2 (5kHz) v5.2.0 HAC
 r1041_e82_400bps_sup_v430  R10.4.1 E8.2 (5kHz) v4.3.0 SUP                              
 r1041_e82_400bps_hac_v430  R10.4.1 E8.2 (5kHz) v4.3.0 HAC                              
@@ -202,7 +203,7 @@ Not all of these are compatible with the public release of Taiyaki.
     #  Download particular model
     python3 download_models.py --checkpoints taiyaki_checkpoint/model
 
-Licence and Copyright
+License and Copyright
 ---------------------
 
 |copy| 2026 Oxford Nanopore Technologies PLC.
@@ -210,7 +211,7 @@ Licence and Copyright
 .. |copy| unicode:: 0xA9 .. copyright sign
 
 Rerio is distributed under the terms of the Oxford Nanopore
-Technologies, PLC.  Public License, v. 1.0.  If a copy of the License
+Technologies, PLC.  Public License, v. 2.0.  If a copy of the License
 was not distributed with this file, You can obtain one at
 http://nanoporetech.com
 
